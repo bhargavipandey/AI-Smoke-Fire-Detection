@@ -183,8 +183,8 @@ if uploaded_file is not None:
         results = model.predict(source=image_np, conf=confidence_threshold)
         result = results[0]
 
-    # Render bounding boxes onto image
-annotated_rgb = result.plot()
+    # Render bounding boxes onto image (kept in native RGB format)
+    annotated_rgb = result.plot()
     
     # Collect detection statistics
     detected_items = []
@@ -260,3 +260,4 @@ annotated_rgb = result.plot()
 
 else:
     st.info("👆 Please upload an image using the box above to start detection.")
+       
