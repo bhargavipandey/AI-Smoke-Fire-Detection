@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Large Model Weights (Downloaded automatically by app.py)
+models/*.pt
+models/*.pth
+models/*.onnx
+models/*.bin
+models/*.tmp
+!models/README.md
+
+# Streamlit Local Secrets & Cache
+.streamlit/secrets.toml
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and temporary files
+*.log
+*.tmp
