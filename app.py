@@ -180,7 +180,8 @@ if uploaded_file is not None:
 
     # Perform genuine model inference
     with st.spinner("Analyzing image for fire and smoke..."):
-        results = model.predict(source=image_np, conf=confidence_threshold)
+        # Pass the raw PIL image directly so Ultralytics automatically handles color channels and preprocessin
+        results = model.predict(source=raw_image, conf=confidence_threshold, imgsz=640)
         result = results[0]
 
     # Render bounding boxes onto image (kept in native RGB format)
