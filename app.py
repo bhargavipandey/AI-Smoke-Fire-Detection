@@ -184,10 +184,8 @@ if uploaded_file is not None:
         result = results[0]
 
     # Render bounding boxes onto image
-    annotated_bgr = result.plot()
-    # Convert BGR back to RGB for correct Streamlit display colors
-    annotated_rgb = cv2.cvtColor(annotated_bgr, cv2.COLOR_BGR2RGB)
-
+   annotated_rgb = result.plot()
+    
     # Collect detection statistics
     detected_items = []
     fire_count = 0
