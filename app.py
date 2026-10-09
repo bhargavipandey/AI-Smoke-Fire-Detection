@@ -184,7 +184,7 @@ if uploaded_file is not None:
         result = results[0]
 
     # Render bounding boxes onto image
-   annotated_rgb = result.plot()
+annotated_rgb = result.plot()
     
     # Collect detection statistics
     detected_items = []
